@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Список статичных страниц</h1>
+    <ul>
+        {% for page in pages %}
+            <li>{{ page.title }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'pages:create_static_page' %}">Создать новую страницу</a>
+{% endblock %}
